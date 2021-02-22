@@ -77,9 +77,6 @@ export default {
     navigated () {
       return this.$store.getters['main/getCurrentRoute']
     }
-  },
-  mounted () {
-    console.log(window.location.href)
   }
 }
 </script>

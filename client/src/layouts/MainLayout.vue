@@ -3,7 +3,7 @@
       <q-layout view="lHh lpr lFf">
         <q-page-container>
           <div class="app-layout-view">
-            <Header :handleOpenCloseDrawer="handleOpenCloseDrawer"/>
+            <Header />
             <router-view />
           </div>
         </q-page-container>
@@ -15,9 +15,6 @@
 import Header from '../components/includes/Header'
 export default {
   name: 'Layout',
-  props: {
-    handleOpenCloseDrawer: Function
-  },
   data () {
     return {
       open: true

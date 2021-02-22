@@ -58,9 +58,6 @@ export default {
     parent () {
       return this.$store.getters['main/getSideNavParent']
     }
-  },
-  mounted () {
-    console.log(this.$store.getters['main/getSideNavParent'])
   }
 }
 </script>
