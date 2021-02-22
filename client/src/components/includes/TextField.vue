@@ -1,6 +1,6 @@
 <template>
     <div>
-      <input :type="TextFieldType" :name="TextFieldName" :value="TextWithIn" placeholder="email" class="text-field" required />
+      <input :type="TextFieldType" :name="TextFieldName" :value="TextWithIn" :placeholder="LabelText" class="text-field" required />
     </div>
 </template>
 
