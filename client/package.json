@@ -1,9 +1,9 @@
 {
-  "name": "style-swipe",
+  "name": "fitmaxng",
   "version": "0.0.1",
-  "description": "Swipe left and right to see clothes that are a match for you.",
-  "productName": "Style Swipy by Aubry",
-  "author": "Aubry Life",
+  "description": "fitmaxng",
+  "productName": "fitmaxng",
+  "author": "fitmaxng",
   "private": true,
   "scripts": {
     "dev": "quasar dev",
@@ -16,8 +16,6 @@
     "core-js": "^3.6.5",
     "hooper": "^0.3.4",
     "quasar": "^1.0.0",
-    "vue-flickity": "^1.2.1",
-    "vue-simple-drawer": "^1.0.6",
     "vuex": "^3.6.2"
   },
   "devDependencies": {

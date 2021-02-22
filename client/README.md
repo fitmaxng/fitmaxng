@@ -1,6 +1,4 @@
-# Style Swipy by Aubry (style-swipe)
-
-Swipe left and right to see clothes that are a match for you.
+# Fitmaxng
 
 ## Install the dependencies
 ```bash

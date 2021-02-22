@@ -116,9 +116,9 @@ module.exports = function (/* ctx */) {
       workboxPluginMode: 'GenerateSW', // 'GenerateSW' or 'InjectManifest'
       workboxOptions: {}, // only for GenerateSW
       manifest: {
-        name: 'Style Swipy by Aubry',
-        short_name: 'Style Swipy by Aubry',
-        description: 'Swipe left and right to see clothes that are a match for you.',
+        name: 'fitmaxng',
+        short_name: 'fitmaxng',
+        description: 'fitmaxng',
         display: 'standalone',
         orientation: 'portrait',
         background_color: '#ffffff',
@@ -183,7 +183,7 @@ module.exports = function (/* ctx */) {
       builder: {
         // https://www.electron.build/configuration/configuration
 
-        appId: 'style-swipe'
+        appId: 'fitmaxng'
       },
 
       // More info: https://quasar.dev/quasar-cli/developing-electron-apps/node-integration
