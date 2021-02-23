@@ -10,7 +10,6 @@ const routes = [
       { path: 'buy-credit', component: () => import('./../pages/BuyCredit.vue') }
     ]
   },
-
   // Always leave this as last one,
   // but you can also remove it
   {
