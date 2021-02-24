@@ -6,10 +6,10 @@
         <div id="form-container">
           <q-form>
             <div class="mt">
-              <TextField TextFieldType="text" TextFieldName="username"  LabelText="Username" TextWithIn="Dike Kalu"/>
+              <TextField TextFieldDisplayType="outlined" TextFieldType="text" TextFieldName="username"  LabelText="Username" TextWithIn="Dike Kalu"/>
             </div>
             <div class="mt">
-              <TextField TextFieldType="password" TextFieldName="password"  LabelText="Password" TextWithIn="pass12345"/>
+              <TextField TextFieldDisplayType="outlined" TextFieldType="password" TextFieldName="password"  LabelText="Password" TextWithIn="pass12345"/>
             </div>
             <div class="mt">
               <Button Type="submit" Specification="contain-classic text-dark radius-3 font-weight-bold px-max py-1 float-right" Text="LOGIN" />

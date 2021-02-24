@@ -6,13 +6,13 @@
         <div id="form-container">
           <q-form>
             <div class="mt">
-              <TextField TextFieldType="text" TextFieldName="username"  LabelText="Username" TextWithIn="Dike Kalu"/>
+              <TextField TextFieldDisplayType="outlined" TextFieldType="text" TextFieldName="username"  LabelText="Username" TextWithIn="Dike Kalu"/>
             </div>
             <div class="mt">
-              <TextField TextFieldType="email" TextFieldName="email"  LabelText="Email" TextWithIn="Dike@gmail.com"/>
+              <TextField TextFieldDisplayType="outlined" TextFieldType="email" TextFieldName="email"  LabelText="Email" TextWithIn="Dike@gmail.com"/>
             </div>
             <div class="mt">
-              <TextField TextFieldType="password" TextFieldName="password"  LabelText="Password" TextWithIn="pass12345"/>
+              <TextField TextFieldDisplayType="outlined" TextFieldType="password" TextFieldName="password"  LabelText="Password" TextWithIn="pass12345"/>
             </div>
             <div class="mt">
               <Button Type="submit" Specification="contain-success text-dark radius-3 font-weight-bold px-max py-1 float-right" Text="SIGN UP" />

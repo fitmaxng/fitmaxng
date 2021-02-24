@@ -1,6 +1,11 @@
 <template>
     <div>
-      <input :type="TextFieldType" :name="TextFieldName" :value="TextWithIn" :placeholder="LabelText" class="text-field" required />
+      <div v-if="TextFieldDisplayType ==='outlined'">
+        <input :type="TextFieldType" :name="TextFieldName" :value="TextWithIn" :placeholder="LabelText" class="text-field" required />
+      </div>
+      <div v-else-if="TextFieldDisplayType ==='standard'">
+        <q-input :type="TextFieldType" :name="TextFieldName" :value="TextWithIn" :label="LabelText" />
+      </div>
     </div>
 </template>
 
@@ -11,7 +16,8 @@ export default {
     TextWithIn: String,
     LabelText: String,
     TextFieldName: String,
-    TextFieldType: String
+    TextFieldType: String,
+    TextFieldDisplayType: String
   }
 }
 </script>

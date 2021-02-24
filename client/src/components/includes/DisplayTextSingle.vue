@@ -1,7 +1,8 @@
 <template>
     <div>
-        <div v-show="Large" class="classic" style="font-size: 24px">{{Text}}</div>
-        <div v-show="Small" :class="Color" style="font-size: 14px">
+        <div v-if="Large" class="classic" style="font-size: 24px">{{Text}}</div>
+        <div v-if="Middium" :class="Color" style="font-size: 20px; font-weight: bold">{{Text}}</div>
+        <div v-if="Small" :class="Color" style="font-size: 14px">
           <div :style="[fontStyle ? {fontFamily: fontStyle}:{fontFamily: ''}]">{{Text}}</div>
           <div :style="[fontStyle ? {fontFamily: fontStyle}:{fontFamily: ''}]">{{Text2}}</div>
         </div>
@@ -15,6 +16,7 @@ export default {
     Text: String,
     Text2: String,
     Large: Boolean,
+    Middium: Boolean,
     Small: Boolean,
     Color: String,
     fontStyle: String

@@ -8,11 +8,19 @@
             <div class="grid-layout">
               <GridLayout :data="buttonData" />
             </div>
+            <div class="flex" style="margin-left: -11px">
+                <div class="pane-one">
+                    <Button Text="Other" ButtonType="button" Specification="ml-2 mt-2 outline-classic-2 text-dark px-2 no-background font-weight-bold radius-3 py-1" />
+                </div>
+                <div class="pane-two">
+                    <TextField TextFieldDisplayType="standard" TextFieldType="" TextFieldName="credit"  LabelText="How many credits?" TextWithIn="55" />
+                </div>
+            </div>
             <div class="useage" style="font-weight: bold">
-              YOU SAVED 10%
+              YOU SAVED 31%
             </div>
             <div class="flex flex-center">
-              <Button HeadingSize="mid" Heading="PAY ₦22,000" Specification="mt-1 contain-classic text-light font-weight-bold py-4 px-5 radius-4" />
+              <Button ButtonType="submit" HeadingSize="mid" Heading="PAY ₦22,000" Specification="mt-1 contain-classic text-light font-weight-bold py-4 px-5 radius-4" />
             </div>
           </div>
         </div>
@@ -24,8 +32,9 @@ import DisplayText from '../components/includes/DisplayText'
 import DisplayTextSingle from '../components/includes/DisplayTextSingle'
 import GridLayout from '../components/includes/GridLayout'
 import Button from '../components/includes/Button'
+import TextField from '../components/includes/TextField'
 export default {
-  name: 'BuyCredit',
+  name: 'OtherClasses',
   data () {
     return {
       text: 'The More You Buy, The More You Save!',
@@ -38,8 +47,7 @@ export default {
         '11 Credit',
         '13 Credit',
         '15 Credit',
-        '17 Credit',
-        'Other'
+        '17 Credit'
       ]
     }
   },
@@ -47,7 +55,8 @@ export default {
     DisplayText,
     DisplayTextSingle,
     GridLayout,
-    Button
+    Button,
+    TextField
   },
   mounted () {
     this.$store.dispatch('main/setActionNavigated', 'loggedin')
@@ -71,4 +80,9 @@ export default {
     text-align: center;
     margin-top: 19px;
   }
+  .pane-one { width: 30% }
+  .pane-two {
+      width: 60%;
+      margin-left: 1%;
+   }
 </style>
