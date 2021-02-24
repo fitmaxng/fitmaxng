@@ -1,7 +1,7 @@
 <template>
   <div>
     <button :type="ButtonType" :class="Specification">
-      <li>{{Heading}}</li>
+      <li :class="HeadingSize">{{Heading}}</li>
       <li>{{Text}}</li>
     </button>
   </div>
@@ -14,7 +14,8 @@ export default {
     Specification: String,
     Heading: String,
     Text: String,
-    ButtonType: String
+    ButtonType: String,
+    HeadingSize: String
   }
 }
 </script>
@@ -41,6 +42,16 @@ export default {
   .px-3 {
     padding-left: 15px;
     padding-right: 15px;
+  }
+
+  .px-4 {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .px-5 {
+    padding-left: 30px;
+    padding-right: 30px;
   }
 
   .e-px-1 {
@@ -83,14 +94,36 @@ export default {
     padding-bottom: 15px;
   }
 
+  .py-4 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .xsm { font-size: 10px }
+  .sml { font-size: 15px }
+  .mid { font-size: 20px }
+  .lrg { font-size: 25px }
+  .xlg { font-size: 30px }
+
   .mt-1 { margin-top: 5px }
   .mt-2 { margin-top: 10px }
   .mt-3 { margin-top: 15px }
   .mt-4 { margin-top: 20px }
 
+  .ml-1 { margin-left: 5px }
+  .ml-2 { margin-left: 10px }
+  .ml-3 { margin-left: 15px }
+  .ml-4 { margin-left: 20px }
+
+  .mr-1 { margin-right: 5px }
+  .mr-2 { margin-right: 10px }
+  .mr-3 { margin-right: 15px }
+  .mr-4 { margin-right: 20px }
+
   .radius-1 { border-radius: 5.6px; }
   .radius-2 { border-radius: 8px; }
   .radius-3 { border-radius: 15px; }
+  .radius-4 { border-radius: 28px; }
 
   .float-left { float: left; }
   .float-right { float: right; }
@@ -110,10 +143,50 @@ export default {
   .contain-dander { background:#FF6633 }
   .contain-success { background: #00DC1D }
 
-  .outline-dark-1 { border: 1px solid black }
-  .outline-classic-1 { border: 1px solid #0BB8FA }
-  .outline-dander-1 { border: 1px solid #FF6633 }
-  .outline-dark-2 { border: 2px solid black }
-  .outline-classic-2 { border: 2px solid #0BB8FA }
-  .outline-dander-2 { border: 2px solid #FF6633 }
+  .outline-dark-1 {
+    border: 1px solid black;
+    &:hover {
+      color: white;
+      background: black;
+    }
+   }
+
+  .outline-classic-1 {
+    border: 1px solid #0BB8FA;
+    &:hover {
+      color: black;
+      background: #0BB8FA;
+    }
+  }
+
+  .outline-dander-1 {
+    border: 1px solid #FF6633;
+    &:hover {
+      color: black;
+      background: #FF6633;
+    }
+  }
+
+  .outline-dark-2 {
+    border: 2px solid black;
+    &:hover {
+      color: black;
+      background: black;
+    }
+  }
+  .outline-classic-2 {
+    border: 2px solid #0BB8FA;
+    &:hover {
+      color: black;
+      background: #0BB8FA;
+    }
+  }
+  .outline-dander-2 {
+    border: 2px solid #FF6633;
+    &:hover {
+      color: black;
+      background: #FF6633;
+    }
+  }
+
 </style>
