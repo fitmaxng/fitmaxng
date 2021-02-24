@@ -15,11 +15,6 @@
 import Header from '../components/includes/Header'
 export default {
   name: 'Layout',
-  data () {
-    return {
-      open: true
-    }
-  },
   components: {
     Header
   }

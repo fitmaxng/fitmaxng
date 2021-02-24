@@ -9,7 +9,8 @@ const routes = [
       { path: 'classes', component: () => import('./../pages/Classes.vue') },
       { path: 'buy-credit', component: () => import('./../pages/BuyCredit.vue') },
       { path: 'other-classes', component: () => import('./../pages/OtherClasses.vue') },
-      { path: 'frequently-asked-question', component: () => import('./../pages/FAQ.vue') }
+      { path: 'frequently-asked-question', component: () => import('./../pages/FAQ.vue') },
+      { path: 'update-user-information', component: () => import('./../pages/UpdateInformation.vue') }
     ]
   },
   // Always leave this as last one,
