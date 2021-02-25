@@ -133,14 +133,14 @@ export default {
   .no-background { background: transparent }
 
   .text-classic { color:#0BB8FA }
-  .text-dander { color:#FF6633 }
+  .text-danger { color:#FF6633 }
   .text-success { color: #00DC1D }
   .text-light { color: white }
   .text-dark { color: black }
 
   .contain-dark { background: black }
   .contain-classic { background:#0BB8FA }
-  .contain-dander { background:#FF6633 }
+  .contain-danger { background:#FF6633 }
   .contain-success { background: #00DC1D }
 
   .outline-dark-1 {
@@ -151,40 +151,56 @@ export default {
     }
    }
 
+   .outline-grayed-1 {
+    border: 1px solid gray;
+    &:hover {
+      color: white;
+      background: gray;
+    }
+   }
+
   .outline-classic-1 {
     border: 1px solid #0BB8FA;
     &:hover {
-      color: black;
+      color: white;
       background: #0BB8FA;
     }
   }
 
-  .outline-dander-1 {
+  .outline-danger-1 {
     border: 1px solid #FF6633;
     &:hover {
-      color: black;
+      color: white;
       background: #FF6633;
     }
   }
 
+  .outline-grayed-2 {
+    border: 2px solid gray;
+    &:hover {
+      color: white;
+      background: gray;
+    }
+   }
+
   .outline-dark-2 {
     border: 2px solid black;
     &:hover {
-      color: black;
+      color: white;
       background: black;
     }
   }
   .outline-classic-2 {
     border: 2px solid #0BB8FA;
     &:hover {
-      color: black;
+      color: white;
       background: #0BB8FA;
     }
   }
-  .outline-dander-2 {
+  .outline-danger-2 {
     border: 2px solid #FF6633;
     &:hover {
-      color: black;
+      color: white;
       background: #FF6633;
     }
   }

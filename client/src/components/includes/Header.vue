@@ -51,6 +51,8 @@
       </q-toolbar>
      </q-header>
    </div>
+    <div style="padding-bottom: 168px" v-if="navigated === ''">
+   </div>
   </div>
 </template>
 

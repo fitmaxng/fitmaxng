@@ -1,7 +1,7 @@
 <template>
   <q-page>
     <div id="container">
-      <div style="padding-left: 1px">
+      <div style="padding-left: 1px; margin-top: 32px">
         <DisplayText Heading="Continue" :Text="text" Color="classic" />
         <div id="form-container">
           <q-form>

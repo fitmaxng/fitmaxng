@@ -7,22 +7,30 @@
                         <CloseIcon />
                     </button>
                     <div id="main-side-nav-tool">
-                        <li class="flex mt main-list">
-                            <UserIcon />
-                            <div class="list-text">Profile</div>
-                        </li>
-                        <li class="flex mt main-list">
-                            <WeightLiftIcon />
-                            <div class="list-text">Workout Classes</div>
-                        </li>
-                        <li class="flex mt main-list">
-                            <WalletIcon />
-                            <div class="list-text">Fitness Wallet</div>
-                        </li>
-                        <li class="flex mt main-list">
-                            <QuestionMarkIcon />
-                            <div class="list-text">Help</div>
-                        </li>
+                        <router-link to="/profile">
+                            <li class="flex mt main-list" @click="handleOpenCloseDrawer">
+                                <UserIcon />
+                                <div class="list-text">Profile</div>
+                            </li>
+                        </router-link>
+                        <router-link to="/classes">
+                            <li class="flex mt main-list" @click="handleOpenCloseDrawer">
+                                <WeightLiftIcon />
+                                <div class="list-text">Workout Classes</div>
+                            </li>
+                        </router-link>
+                        <router-link to="/fitness-wallet">
+                            <li class="flex mt main-list" @click="handleOpenCloseDrawer">
+                                <WalletIcon />
+                                <div class="list-text">Fitness Wallet</div>
+                            </li>
+                        </router-link>
+                        <router-link to="/frequently-asked-question">
+                            <li class="flex mt main-list" @click="handleOpenCloseDrawer">
+                                <QuestionMarkIcon />
+                                <div class="list-text">Help</div>
+                            </li>
+                        </router-link>
                     </div>
                 </div>
             </div>
@@ -63,6 +71,10 @@ export default {
 </script>
 
 <style scoped lang="scss">
+    a {
+      text-decoration: none;
+      color: black;
+    }
     button {
         outline: none;
         background: none;
