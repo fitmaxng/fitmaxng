@@ -8,9 +8,13 @@ const routes = [
       { path: 'login', component: () => import('./../pages/Login.vue') },
       { path: 'classes', component: () => import('./../pages/Classes.vue') },
       { path: 'buy-credit', component: () => import('./../pages/BuyCredit.vue') },
-      { path: 'other-classes', component: () => import('./../pages/OtherClasses.vue') },
+      { path: 'other-credits', component: () => import('./../pages/OtherCredits.vue') },
       { path: 'frequently-asked-question', component: () => import('./../pages/FAQ.vue') },
-      { path: 'update-user-information', component: () => import('./../pages/UpdateInformation.vue') }
+      { path: 'update-information', component: () => import('./../pages/UpdateInformation.vue') },
+      { path: 'profile', component: () => import('./../pages/Profile.vue') },
+      { path: 'update-body-measurement', component: () => import('./../pages/UpdateBodyMeasurement.vue') },
+      { path: 'fitness-wallet', component: () => import('./../pages/FItnessWallet.vue') },
+      { path: 'zoom', component: () => import('./../pages/Zoom.vue') }
     ]
   },
   // Always leave this as last one,

@@ -1,7 +1,7 @@
 <template>
   <q-page>
     <div id="container">
-      <div style="padding-left: 1px">
+      <div style="padding-left: 1px; margin-top: 28px">
         <DisplayText Heading="Start" :Text="text" Color="success"/>
         <div id="form-container">
           <q-form>
@@ -53,7 +53,7 @@ export default {
   }
 
   #form-container {
-    margin-top: 55px;
+    margin-top: 65px;
   }
 
   .mt {

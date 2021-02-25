@@ -38,7 +38,7 @@ export default {
   #home {
     background: #000032;
     margin-top: -85px;
-    padding-bottom: 100px;
+    padding-bottom: 80px;
   }
   #container {
     padding-top: 98px;
