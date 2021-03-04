@@ -2,6 +2,7 @@
     <q-page>
       <div id="container">
         <div style="margin-top: -95px">
+          <q-form>
           <div class="flex">
               <div style="width: 35%">
                   <strong>
@@ -120,6 +121,7 @@
           <div style="margin-top: 43px">
           <Button Type="submit" Specification="contain-danger text-light radius-3 font-weight-bold px-max py-1 float-left" Text="SAVE" />
           </div>
+          </q-form>
         </div>
       </div>
     </q-page>
