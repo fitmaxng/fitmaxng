@@ -13,8 +13,7 @@ const routes = [
       { path: 'update-information', component: () => import('./../pages/UpdateInformation.vue') },
       { path: 'profile', component: () => import('./../pages/Profile.vue') },
       { path: 'update-body-measurement', component: () => import('./../pages/UpdateBodyMeasurement.vue') },
-      { path: 'fitness-wallet', component: () => import('./../pages/FItnessWallet.vue') },
-      { path: 'zoom', component: () => import('./../pages/Zoom.vue') }
+      { path: 'fitness-wallet', component: () => import('./../pages/FItnessWallet.vue') }
     ]
   },
   // Always leave this as last one,

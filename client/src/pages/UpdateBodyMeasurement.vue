@@ -9,7 +9,9 @@
                           <TextDisplaySingle :Small="true" Text="Weight" />
                       </div>
                    </strong>
-                  <Button Text="88" Specification="radius-4 px-4 py-1 outline-grayed-2 text-dark font-weight-bold" />
+                   <div style="width: 65%">
+                    <TextField TextFieldDisplayType="outlined" :IsStep="true" TextFieldName="m_1" TextWithIn="88" OutlineStyle="dark-outline" />
+                   </div>
               </div>
               <div style="width: 65%; margin-top:  2px">
                   <TextDisplaySingle :Small="true" Text="Select Measurement Unit" />
@@ -30,7 +32,9 @@
                           <TextDisplaySingle :Small="true" Text="Height" />
                       </div>
                    </strong>
-                  <Button Text="1.6" Specification="radius-4 px-4 py-1 outline-grayed-2 text-dark font-weight-bold" />
+                   <div style="width: 65%">
+                    <TextField TextFieldDisplayType="outlined" :IsStep="true" TextFieldName="m_2" TextWithIn="1.6" OutlineStyle="dark-outline" />
+                   </div>
               </div>
               <div style="width: 65%; margin-top:  2px">
                   <TextDisplaySingle :Small="true" Text="Select Measurement Unit" />
@@ -51,7 +55,9 @@
                           <TextDisplaySingle :Small="true" Text="Waist" />
                       </div>
                    </strong>
-                  <Button Text="44" Specification="radius-4 px-4 py-1 outline-grayed-2 text-dark font-weight-bold" />
+                   <div style="width: 65%">
+                    <TextField TextFieldDisplayType="outlined" :IsStep="true" TextFieldName="m_2" TextWithIn="44" OutlineStyle="dark-outline" />
+                   </div>
               </div>
               <div style="width: 65%; margin-top:  2px">
                   <TextDisplaySingle :Small="true" Text="Select Measurement Unit" />
@@ -72,7 +78,9 @@
                           <TextDisplaySingle :Small="true" Text="Hip" />
                       </div>
                    </strong>
-                  <Button Text="88" Specification="radius-4 px-4 py-1 outline-grayed-2 text-dark font-weight-bold" />
+                  <div style="width: 65%">
+                    <TextField TextFieldDisplayType="outlined" :IsStep="true" TextFieldName="m_3" TextWithIn="88" OutlineStyle="dark-outline" />
+                   </div>
               </div>
               <div style="width: 65%; margin-top:  2px">
                   <TextDisplaySingle :Small="true" Text="Select Measurement Unit" />
@@ -93,7 +101,9 @@
                           <TextDisplaySingle :Small="true" Text="Arm" />
                       </div>
                    </strong>
-                  <Button Text="18" Specification="radius-4 px-4 py-1 outline-grayed-2 text-dark font-weight-bold" />
+                  <div style="width: 65%">
+                    <TextField TextFieldDisplayType="outlined" :IsStep="true" TextFieldName="m_4" TextWithIn="18" OutlineStyle="dark-outline" />
+                   </div>
               </div>
               <div style="width: 65%; margin-top:  2px">
                   <TextDisplaySingle :Small="true" Text="Select Measurement Unit" />
@@ -118,11 +128,13 @@
 <script>
 import TextDisplaySingle from '../components/includes/DisplayTextSingle'
 import Button from '../components/includes/Button'
+import TextField from '../components/includes/TextField'
 export default {
   name: 'OtherClasses',
   components: {
     TextDisplaySingle,
-    Button
+    Button,
+    TextField
   },
   mounted () {
     this.$store.dispatch('main/setActionNavigated', 'loggedin')
