@@ -16,8 +16,7 @@ const routes = [
       { path: 'fitness-wallet', component: () => import('./../pages/FItnessWallet.vue') }
     ]
   },
-  // Always leave this as last one,
-  // but you can also remove it
+  // Always leave this as last one but you can also remove it.
   {
     path: '*',
     component: () => import('pages/Error404.vue')
