@@ -5,7 +5,7 @@
         <img src="../assets/images/center-display.png" id="image" alt="Center image" />
       </div>
       <div id="center-text">
-        <DisplayTextStringSingle Text="Instructor Lead Fitness Zoom Class Without Leaving Your House" Color="classic" :Large="true"/>
+        <DisplayTextStringSingle Text="Virtual Instructor Lead Fitness Classes on Zoom" Color="classic" :Large="true"/>
       </div>
       <div class="flex flex-center column">
         <router-link to='/signup'>
