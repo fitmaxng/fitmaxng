@@ -1,5 +1,5 @@
 const configs = {
-  BASIC_API_HOSTNAME: 'http://localhost:8000'
+  BASIC_API_HOSTNAME: 'https://api.fitmax.com.ng'
 }
 
 export default configs
