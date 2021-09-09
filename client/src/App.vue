@@ -1,18 +1,18 @@
 <template>
   <div id="q-app">
     <MainLayout />
-    <Drawer />
+    <!-- <Drawer /> -->
   </div>
 </template>
 
 <script>
 import MainLayout from './layouts/MainLayout'
-import Drawer from './components/includes/Drawer'
+// import Drawer from './components/includes/Drawer'
 export default {
   name: 'Main',
   components: {
-    MainLayout,
-    Drawer
+    MainLayout
+    // Drawer
   }
 }
 </script>

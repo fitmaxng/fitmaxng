@@ -1,37 +1,35 @@
 <template>
-  <div class="q-pa-md">
+  <div id="header-section" class="q-pa-md">
   <div v-if="navigated === 'loggedin'">
       <q-header style="background: white" class="text-primary q-pa-md">
         <q-toolbar>
           <div id="right-side-nav-items">
           <q-btn flat round dense icon="menu" @click="handleOpenMenu" class="q-mr-sm" color="black" />
+                <router-link to="/classes">
             <div id="icon-container">
-                <DiamondAcre />
+                <FitMaxLogo />
             </div>
+                </router-link>
             <div>
-              <!-- <div class="app-name">
-                  <strong>FITMAX</strong>
-              </div> -->
             </div>
           </div>
               <q-space />
             <div id="right-nav-props">
-              <div id="user-name">Hi Dike <span @click="logOut">(logout)</span> </div>
-              <!-- <Button ButtonType="button" Specification="outline-dark-2 text-dark radius-3 px-2 font-weight-bold mt-2" Text="2 Credits" /> -->
-              <Button  Specification="contain-dark text-light radius-3 font-weight-bold mt-2 px-3 px-max e-px-1 e-py-2" Text="Subscribe" />
-              <!-- <div id="measurement-text">
-                Update Body<br />
-                Measurement
-              </div> -->
+              <router-link to="/fitness-wallet"><div id="user-name">Hi {{currentUser.name}}</div></router-link>
+              <router-link to="/fitness-wallet"><div id="user-name">{{creditBalance}}</div></router-link>
+              <!-- <router-link to="/update-body-measurement">
+              <div id="measurement-text">
+                Measurements
+              </div>
+              </router-link> -->
             </div>
         </q-toolbar>
       </q-header>
   </div>
   <div v-if="navigated === 'loggedout'">
-    <q-header style="background: white; padding-top: 0px" class="text-primary q-pa-md">
+    <q-header style="background: white; padding-top: 43px" class="text-primary q-pa-md">
       <q-toolbar style="padding-left: 25px">
           <div>
-            <DiamondAcre />
           </div>
           <div id="app-name-2">
               <strong>FITMAX</strong>
@@ -40,62 +38,57 @@
     </q-header>
    </div>
    <div v-if="navigated === 'guest'">
-     <q-header style="background: #000032; padding-top: 0px" class="text-primary q-pa-md">
+     <q-header style="background: #000032; padding-top: 43px" class="text-primary q-pa-md">
       <q-toolbar class="flex flex-center">
           <div>
-            <DiamondAcre />
           </div>
           <div id="app-name-3">
-              <strong>FITMAX</strong>
+              <strong>FITMAXa</strong>
           </div>
       </q-toolbar>
      </q-header>
-   </div>
-    <div style="padding-bottom: 168px" v-if="navigated === ''">
    </div>
   </div>
 </template>
 
 <script>
-import DiamondAcre from './icons/DiamondAcre'
-import Button from './Button'
-import { mapActions, mapGetters } from 'vuex'
+import FitMaxLogo from './icons/FitMaxLogo'
+import { mapGetters } from 'vuex'
 
 export default {
   name: 'Header',
   data () {
     return {
-      // mode: 'guest'
+      mode: 'guest'
     }
   },
   components: {
-    DiamondAcre,
-    Button
+    FitMaxLogo
   },
   methods: {
-    ...mapActions('mainStore', [
-      'handleOpenMenu',
-      'logOut'
-    ]),
     handleOpenMenu () {
-      this.$store.dispatch('main/setSideNavActionOpen')
+      this.$store.dispatch('fitmaxStore/setSideNavActionOpen')
     }
   },
   computed: {
-    ...mapGetters('mainStore', ['navigated'])
+    ...mapGetters('fitmaxStore', ['currentUser', 'navigated']),
+    creditBalance () {
+      return this.currentUser.available_credits + ' credits'
+    }
   }
 }
 </script>
 
 <style scoped lang="scss">
     @import '../../css/quasar.variables.sass';
+
     .header-text {
         color: $danger;
         font-weight: bold;
         font-size: 20px;
     }
     #right-side-nav-items {
-      margin-top: 0px;
+      margin-top: 10px;
       display: flex;
     }
     .container {
@@ -113,12 +106,12 @@ export default {
     #app-name-2 {
       color: black;
       font-size: 14px;
-      margin-top: 0px;
+      margin-top: -6px;
     }
     #app-name-3 {
       color: white;
       font-size: 14px;
-      margin-top: 0px;
+      margin-top: -6px;
     }
     #right-nav-props {
       color: black;

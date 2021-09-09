@@ -1,18 +1,20 @@
 <template>
   <q-page>
     <div id="container">
-      <div style="padding-left: 1px; margin-top: 32px">
-        <DisplayText Heading="Continue" :Text="text" Color="classic" />
+      <div style="padding-left: 1px; margin-top: 100px">
+        <DisplayText Heading="Log In" :Text="title" Color="success"/>
         <div id="form-container">
           <q-form>
             <div class="mt">
-              <TextField TextFieldDisplayType="outlined" TextFieldType="text" TextFieldName="username"  LabelText="Username" TextWithIn="Dike Kalu"/>
+              <q-input outlined :value="loginForm.email" @input="updateEmail" label="Email" placeholder="Email" type="email" :dense="dense" />
             </div>
             <div class="mt">
-              <TextField TextFieldDisplayType="outlined" TextFieldType="password" TextFieldName="password"  LabelText="Password" TextWithIn="pass12345"/>
+              <q-input outlined :value="loginForm.password" @input="updatePassword" label="Password" placeholder="Password" type="password" :dense="dense" />
             </div>
             <div class="mt">
-              <Button Type="submit" Specification="contain-classic text-dark radius-3 font-weight-bold px-max py-1 float-right" Text="LOGIN" />
+              <q-btn color="secondary" label="LOG IN" glossy
+              v-on:click.prevent="submitLoginForm"
+              />
             </div>
           </q-form>
         </div>
@@ -23,27 +25,40 @@
 
 <script>
 import DisplayText from '../components/includes/DisplayText'
-import TextField from '../components/includes/TextField'
-import Button from '../components/includes/Button'
+// import TextField from '../components/includes/TextField'
+import { mapActions, mapGetters } from 'vuex'
+
 export default {
   name: 'LoginPage',
   data () {
     return {
-      text: "Your Fitness Journey, Don't Give Up!"
+      dense: false,
+      title: ''
     }
   },
-  components: {
-    DisplayText,
-    TextField,
-    Button
+  methods: {
+    ...mapActions('mainStore', [
+      'updateLoginForm', 'submitLoginForm'
+    ]),
+    updateEmail (val) {
+      this.updateLoginForm({ field: 'email', value: val })
+    },
+    updatePassword (val) {
+      this.updateLoginForm({ field: 'password', value: val })
+    },
+    verifyForm () {
+      // TODO: implement getting the values from getter and making sure they're correct.
+      return false
+    }
   },
   computed: {
-    navigated () {
-      return this.$store.getters['main/getCurrentRoute']
-    }
+    ...mapGetters('mainStore', ['loginForm'])
+  },
+  components: {
+    DisplayText
   },
   mounted () {
-    this.$store.dispatch('main/setActionNavigated', 'loggedout')
+    // this.$store.dispatch('main/setActionNavigated', 'loggedout')
   }
 }
 </script>
@@ -52,11 +67,10 @@ export default {
   #container {
     padding-right: 42px;
     padding-left: 42px;
-    margin-top: 30px;
   }
 
   #form-container {
-    margin-top: 55px;
+    margin-top: 65px;
   }
 
   .mt {

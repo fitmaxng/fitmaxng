@@ -3,7 +3,14 @@ const store = {
   state: {
     childSideNav: false,
     parentSideNav: false,
-    navigated: undefined
+    navigated: undefined,
+    signupForm: {
+      first_name: '',
+      last_name: '',
+      email: '',
+      password: '',
+      confirm_password: ''
+    }
   },
   getters: {
     getSideNavChild (state) {
@@ -14,6 +21,9 @@ const store = {
     },
     getCurrentRoute (state) {
       return state.navigated
+    },
+    signupForm (state) {
+      return state.signupForm
     }
   },
   actions: {
@@ -25,11 +35,20 @@ const store = {
     },
     setActionNavigated (context, payload) {
       context.commit('handleSwitchRoute', payload)
+    },
+    updateSignupForm (context, payload) {
+      context.commit('updateSignupFormMutation', payload)
     }
   },
   mutations: {
     handleSwitchRoute (state, payload) {
       state.navigated = payload
+    },
+    updateMessage (state, message) {
+      state.obj.message = message
+    },
+    updateSignupFormMutation (state, message) {
+      state.signupForm[message.name] = message.value
     },
     handleOpenSideNavOpen (state) {
       state.parentSideNav = !state.parentSideNav

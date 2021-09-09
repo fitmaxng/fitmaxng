@@ -1,13 +1,29 @@
-import vue from 'vue'
-import vuex from 'vuex'
-import main from './modules/main'
+import Vue from 'vue'
+import Vuex from 'vuex'
 
-vue.use(vuex)
+import mainStore from './mainStore'
 
-const Store = new vuex.Store({
-  modules: {
-    main: main
-  }
-})
+Vue.use(Vuex)
 
-export default Store
+/*
+ * If not building with SSR mode, you can
+ * directly export the Store instantiation;
+ *
+ * The function below can be async too; either use
+ * async/await or return a Promise which resolves
+ * with the Store instance.
+ */
+
+export default function (/* { ssrContext } */) {
+  const Store = new Vuex.Store({
+    modules: {
+      mainStore
+    },
+
+    // enable strict mode (adds overhead!)
+    // for dev mode only
+    strict: process.env.DEV
+  })
+
+  return Store
+}

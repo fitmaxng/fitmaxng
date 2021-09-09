@@ -100,9 +100,9 @@ export default {
         padding-top: 26px;
         padding-left: 28px;
     }
-    #main-side-nav-tool {
-        margin-top: 57px;
-    }
+    // #main-side-nav-tool {
+    //     margin-top: 57px;
+    // }
     .list-text {
         margin-top: -4px;
         margin-left: 5px;

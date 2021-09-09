@@ -26,10 +26,10 @@ export default {
   .layout {
     font-family: 'Hammersmith One', sans-serif;
     font-family: 'Noto Sans JP', sans-serif;
-    padding-top: 20px;
+    padding-top: 0px;
   }
 
   .app-layout-view {
-    margin-top: -85px
+    margin-top: 0px
   }
 </style>
