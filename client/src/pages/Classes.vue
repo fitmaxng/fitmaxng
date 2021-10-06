@@ -49,9 +49,10 @@ export default {
       return moment(String(dt)).format('dddd MMM Do h:mm a')
     },
     shouldDisable (dt) {
-      return moment().diff(dt, 'minutes') < 20
+      // return moment().diff(dt, 'minutes') < 20
+      return false
     },
-    gotoClass (name, dt) {
+    gotoCsqllitlass (name, dt) {
       this.clicked = true
       if (this.shouldDisable(dt)) {
         return null
